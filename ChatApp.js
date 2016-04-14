@@ -100,7 +100,7 @@ class ChatApp extends React.Component {
     return(
     <div className="chat-app clearfix">
 		  <div className="chat-app_left">
-			<div className="heading"><h3 className="messenger-title">Messager</h3></div>
+			<div className="heading"><h3 className="messenger-title">Messanger</h3></div>
 			<div className="thread-list">
         {threads.map(this.renderThreadItem, this)}
 			</div>
