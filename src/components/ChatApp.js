@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import ThreadItem from './ThreadItem';
 import MessageItem from './MessageItem';
 
+import './ChatApp.css'
+
 const initState = {
   newMessage:'',
   threads: [  
@@ -15,7 +17,7 @@ const initState = {
         {from_me:false, content:'試著', time:'12:26'},
         {from_me:false, content:'靠左邊嘛', time:'12:26'},
         {from_me:true, content:'換我了', time:'12:27'},
-        {from_me:true, content:'有看到嗎？', time:'12:27'}
+        {from_me:true, content:'有看到嗎???!!', time:'12:27'}
       ]
     },
     {
@@ -43,7 +45,7 @@ const initState = {
   currentPerson:1
 };
 
-class ChatApp extends React.Component {
+class ChatApp extends Component {
   constructor(props) {
     super(props);
     this.state = initState;

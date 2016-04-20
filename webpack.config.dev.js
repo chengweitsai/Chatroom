@@ -1,13 +1,21 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: './src/index.js',  // 進入點
+  entry: [
+    'webpack-hot-middleware/client', // 這多一個 hot reload 的 code entry
+    './src/index.js',  // 進入點
+  ],
   output: {
     path: path.join(__dirname, 'static'),
     filename: 'bundle.js',  // 輸出的檔案名稱
     publicPath: '/static/'
   },
+   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ], 
   module: {
     loaders: [{
       test: /\.js$/,   // 針對 js 檔

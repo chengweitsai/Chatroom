@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import './MessageItem.css';
 
-class MessageItem extends React.Component {
+class MessageItem extends Component {
   render() {
     const {from_me, content, time} = this.props;
     return (
@@ -11,9 +12,9 @@ class MessageItem extends React.Component {
   }
 }
 MessageItem.propTypes = {
-  from_me: React.PropTypes.bool,
-  content: React.PropTypes.string,
-  time:    React.PropTypes.string
+  from_me: PropTypes.bool,
+  content: PropTypes.string,
+  time:    PropTypes.string
 }
 
 module.exports = MessageItem;

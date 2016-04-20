@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
-class ThreadItem extends React.Component {
+import './ThreadItem.css'
+
+class ThreadItem extends Component {
   render() {
     const {name, picture, content, time, onClick} = this.props;
     return (
@@ -27,10 +29,10 @@ class ThreadItem extends React.Component {
   }
 }
 ThreadItem.propTypes = {
-  name:    React.PropTypes.string,
-  picture: React.PropTypes.string,
-  content: React.PropTypes.string,
-  time:    React.PropTypes.string
+  name:    PropTypes.string,
+  picture: PropTypes.string,
+  content: PropTypes.string,
+  time:    PropTypes.string
 }
 
-module.exports = ThreadItem;
+export default ThreadItem;
