@@ -17,7 +17,7 @@ const initState = {
         {from_me:false, content:'試著', time:'12:26'},
         {from_me:false, content:'靠左邊嘛', time:'12:26'},
         {from_me:true, content:'換我了', time:'12:27'},
-        {from_me:true, content:'有看到嗎???!!', time:'12:27'}
+        {from_me:true, content:'有看到嗎???', time:'12:27'}
       ]
     },
     {
@@ -27,8 +27,8 @@ const initState = {
       },
       message: [
         {from_me:false, content:':)', time:'11:46'},
-        {from_me:false, content:'今天吃什麼', time:'11:50'},
-        {from_me:true, content:'嗚嗚 吃到不知道', time:'11:51'} 
+        {from_me:false, content:'今天午餐吃什麼', time:'11:50'},
+        {from_me:true, content:'嗚嗚 不知道不知道', time:'11:51'} 
       ]
     },
     {
@@ -37,8 +37,10 @@ const initState = {
         picture:'http://lorempixel.com/492/518/people/9/'
       },
       message:[
-        {from_me:false, content:'誒誒', time:'15:10'},
-        {from_me:false, content:'＠＠＠', time:'15:12'},
+        {from_me:false, content:'關關難過....', time:'15:10'},
+        {from_me:true, content:'（拍拍', time:'15:10'},
+        {from_me:false, content:'但關關不說', time:'15:12'},
+        {from_me:true, content:'= = |||', time:'15:13'}
       ]
     }
   ],
@@ -46,6 +48,10 @@ const initState = {
 };
 
 class ChatApp extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+  
   constructor(props) {
     super(props);
     this.state = initState;
@@ -128,4 +134,4 @@ class ChatApp extends Component {
   }
 }
 
-module.exports = ChatApp;
+export default ChatApp;

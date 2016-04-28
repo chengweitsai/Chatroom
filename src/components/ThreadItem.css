@@ -11,6 +11,7 @@
 	position: relative;
 	height: 70px;
 	overflow-y: hidden;
+	border-bottom: 1px solid rgba(0, 0, 0, .10);
 }
 
 .thread-item_left {

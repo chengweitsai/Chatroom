@@ -11,6 +11,6 @@ import './style.css'
 
 // 把Router render 到畫面上
 render (
-	<Router history={browserHistory} routes={routes}/>
+	<Router history={browserHistory} routes={routes}/>,
 	document.getElementById('root')
 );
